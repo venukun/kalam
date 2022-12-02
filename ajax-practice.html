@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Ajax</title>
+  </head>
+  <body>
+    <input type="number" id="userNumberId" />
+    <button onclick="onSearch()">Search the user</button>
+    <h2>Hello <span id="helloId"></span></h2>
+    <div id="imgId"></div>
+    <script>
+      function onSearch() {
+        var helloDom = document.getElementById("helloId");
+        var imgDom = document.getElementById("imgId");
+        var userNumberDom = document.getElementById("userNumberId");
+        fetch("https://reqres.in/api/users/" + userNumberDom.value)
+          .then(function (res) {
+            return res.json();
+          })
+          .then(function (data) {
+            console.log(data);
+            helloDom.innerHTML =
+              data.data.first_name + " " + data.data.last_name;
+            //imgDom.innerHTML = '<img src="'+ data.data.avatar +'"/>';
+            imgDom.innerHTML = `<img src="${data.data.avatar}" />`;
+          });
+      }
+    </script>
+  </body>
+</html>
