@@ -1,7 +1,7 @@
 import React from "react";
 
 function SelectProduct(props) {
-  return <div>{props.name}</div>;
+  return;
 }
 
 export default SelectProduct;
