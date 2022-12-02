@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript Simple Calculator</title>
+	</head>
+	<body>
+		<div>
+			<input type="number" id="number1Id" />
+			<input type="number" id="number2Id" />
+			<button onclick="add()">Add</button>
+			<h3 id="addResultId"></h3>
+		</div>
+		<script>
+			function add() {
+				var number1 = document.getElementById('number1Id');
+				var number2 = document.getElementById('number2Id');
+				var addResultDom = document.getElementById('addResultId');
+				addResultDom.innerHTML = (+number1.value) + (+number2.value);
+			}
+		</script>
+	</body>
+</html>
