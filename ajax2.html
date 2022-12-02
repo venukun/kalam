@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Javascript Ajax</title>
-		<style>
-			body {
-				text-align: center;
-			}
-			.user-block {
-				display: inline-block;
-				padding-right: 20px;
-				text-align: center;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="usersId"></div>
-		<script>
-			var usersDom = document.getElementById('usersId');
-			var str = '';
-			fetch('https://reqres.in/api/users')
-				.then(function(res){return res.json();})
-				.then(function(obj){
-					console.log(obj);
-					for(var i=0; i<obj.data.length; i++) {
-						console.log(obj.data[i]);
-						//str += '<div class="user-block"><img src="'+ obj.data[i].avatar +'" /><div>'+ obj.data[i].first_name +' '+ obj.data[i].last_name+'</div></div>';
-						str += `<div class="user-block"><img src="${obj.data[i].avatar}"/><div>${obj.data[i].first_name} ${obj.data[i].last_name}</div></div>`;
-					}
-					usersDom.innerHTML = str;
-				});
-		</script>
-	</body>
+  <head>
+    <title>Javascript Ajax</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .user-block {
+        display: inline-block;
+        padding-right: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="usersId"></div>
+    <script>
+      var usersDom = document.getElementById('usersId');
+      var str afhfyuFmnf
+      	.then(function(obj){
+      		console.log(obj);
+      		for(var i=0; i<obj.data.length; i++) {
+      			console.log(obj.data[i]);
+      			//str += '<div class="user-block"><img src="'+ obj.data[i].avatar +'" /><div>'+ obj.data[i].first_name +' '+ obj.data[i].last_name+'</div></div>';
+      			str += `<div class="user-block"><img src="${obj.data[i].avatar}"/><div>${obj.data[i].first_name} ${obj.data[i].last_name}</div></div>`;
+      		}
+      		usersDom.innerHTML = str;
+      	});
+    </script>
+  </body>
 </html>
