@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Javascript Document Object Model</title>
-	</head>
-	<body>
-		<h1 id="headingId">javascript Document Object Model</h1>
-		<button onclick="changeGreen()">Green</button>
-		<button onclick="changeRed()">Red</button>
-		<script>
-			var headingDom = document.getElementById('headingId');
-			console.log(headingDom);
-			console.log(headingDom.innerHTML);
-			function changeGreen() {
-				headingDom.style.color = 'green';
-			}
-			function changeRed() {
-				headingDom.style.color = 'red';
-			}
-		</script>
-	</body>
+  <head>
+    <title>Javascript Document Object Model</title>
+  </head>
+  <body>
+    <h1 id="headingId">javascript Document Object Model</h1>
+    <button onclick="changeGreen()">Green</button>
+    <button onclick="changeRed()">Red</button>
+    <script>
+      var headingDom = document.getElementById("headingId");
+      console.log(headingDom);
+      console.log(headingDom.innerHTML);
+
+      function changeRed() {
+        headingDom.style.color = "red";
+      }
+    </script>
+  </body>
 </html>
