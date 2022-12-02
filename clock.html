@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Clock</title>
-	</head>
-	<body>
-		<h1 id="fullDateId"></h1>
-		<div id="myDateId"></div>
-		<div id="myClockId"></div>
-		<script>
-			var fullDateDom = document.getElementById('fullDateId');
-			var myDateDom = document.getElementById('myDateId');
-			var myClockDom = document.getElementById('myClockId');
-			var date = new Date();
-			var months = ['jan', 'feb' , 'march' , 'april' , 'may' , 'jun' , 'july' , 'aug' , 'sep' , 'oct' , 'nov' , 'dec']
-			fullDateDom.innerHTML = date;
-			myDateDom.innerHTML = date.getFullYear() + '-'+ (date.getMonth()+1) + '-' + date.getDate()+ '  ' + months[date.getMonth()];
-			myClockDom.innerHTML = date.getHours() + ':'+ date.getMinutes() + ':' + date.getSeconds() + ':' + date.getMilliseconds();
-			
-			setInterval(function(){
-				var date2 = new Date();
-				myClockDom.innerHTML = date2.getHours() + ':'+ date2.getMinutes() + ':' + date2.getSeconds() + ':' + date2.getMilliseconds();
-			},1);
-		</script>
-	</body>
+  <head>
+    <title>Clock</title>
+  </head>
+  <body>
+    <h1 id="fullDateId"></h1>
+    <div id="myDateId"></div>
+    <script>
+      var fullDateDom = document.getElementById("fullDateId");
+      var myDateDom = document.getElementById("myDateId");
+      var myClockDom = document.getElementById("myClockId");
+      var date = new Date();
+      var months = [
+        "jan",
+        "feb",
+        "march",
+        "april",
+        "may",
+        "jun",
+        "july",
+        "aug",
+        "sep",
+        "oct",
+        "nov",
+        "dec",
+      ];
+      fullDateDom.innerHTML = date;
+      myDateDom.innerHTML =
+        date.getFullYear() +
+        "-" +
+        (date.getMonth() + 1) +
+        "-" +
+        date.getDate() +
+        "  " +
+        months[date.getMonth()];
+      myClockDom.innerHTML =
+        date.getHours() +
+        ":" +
+        date.getMinutes() +
+        ":" +
+        date.getSeconds() +
+        ":" +
+        date.getMilliseconds();
+
+      setInterval(function () {
+        var date2 = new Date();
+        myClockDom.innerHTML =
+          date2.getHours() +
+          ":" +
+          date2.getMinutes() +
+          ":" +
+          date2.getSeconds() +
+          ":" +
+          date2.getMilliseconds();
+      }, 1);
+    </script>
+  </body>
 </html>
- 
