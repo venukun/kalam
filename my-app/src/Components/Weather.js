@@ -9,7 +9,6 @@ const getWeatherData = (city) => {
       const { temp, temp_max, temp_min } = data.main;
       const { description } = data.weather[0];
       return {
-        city,
         temp,
         temp_max,
         temp_min,
