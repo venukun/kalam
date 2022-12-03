@@ -8,7 +8,6 @@ function Product(props) {
   };
   return (
     <div>
-      <div>Home Needs</div>
       <button onClick={shoot}>{props.product.name}</button>
     </div>
   );
