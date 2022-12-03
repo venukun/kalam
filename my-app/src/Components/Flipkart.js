@@ -7,7 +7,6 @@ function Flipkart() {
   const items = [
     { id: 1, name: "SmartTV" },
     { id: 2, name: "Washing Mechine" },
-    { id: 3, name: "Fridge" },
   ];
   const myFun = (c) => {
     console.log(c);
